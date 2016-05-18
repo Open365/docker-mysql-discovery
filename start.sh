@@ -3,7 +3,7 @@ set -x
 
 eyeos-service-ready-notify-cli &
 
-cat > /etc/mysql/conf.d/max_connections.conf <<MAX_CONN
+cat > /etc/mysql/conf.d/max_connections.cnf <<MAX_CONN
 [mysqld]
 max_connections = $MYSQL_MAX_CONNECTIONS
 MAX_CONN
