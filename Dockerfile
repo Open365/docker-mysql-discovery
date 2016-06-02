@@ -24,6 +24,8 @@ RUN \
 		eyeos-service-ready-notify-cli \
 		eyeos-tags-to-dns \
 		&& \
+	npm cache clean && \
+	npm uninstall npm && \
 	apt-get clean && \
 	apt-get -y remove --purge \
 		curl \
@@ -31,7 +33,11 @@ RUN \
 		build-essential \
 		&& \
 	apt-get -y autoremove --purge && \
-	rm -rf /var/lib/apt/lists/*
+	rm -rf \
+		/var/lib/apt/lists/* \
+		/usr/share/doc \
+		/usr/share/locales \
+		/usr/share/man
 
 COPY ["start.sh", "/tmp/"]
 
