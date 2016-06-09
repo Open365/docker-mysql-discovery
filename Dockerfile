@@ -41,4 +41,4 @@ RUN \
 
 COPY ["start.sh", "/tmp/"]
 
-CMD /tmp/start.sh
+CMD ["/tmp/start.sh"]

@@ -16,4 +16,4 @@ DAR
 # /entrypoint.sh is present in mysql official docker image, and configures
 # the initial db and then starts mysqld, when the parameter passed is mysqld
 # (with optional flags)
-eyeos-run-server --serf --skip-dnsmasq "/entrypoint.sh mysqld"
+exec eyeos-run-server --serf --skip-dnsmasq "/entrypoint.sh mysqld"
